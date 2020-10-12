@@ -29,4 +29,6 @@ xcodebuild -create-xcframework -framework x86_64/OPPWAMobile.framework -framewor
 
 ## Create SPM checksum
 
+```
 swift package compute-checksum OPPWAMobile.xcframework.zip
+```

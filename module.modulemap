@@ -1,4 +1,0 @@
-module OPPWAMobile {
-    header "OPPWAMobile.framework/Headers/OPPWAMobile.h"
-    export *
-}

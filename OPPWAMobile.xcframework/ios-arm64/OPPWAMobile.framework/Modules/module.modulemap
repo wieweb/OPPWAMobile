@@ -1,0 +1,4 @@
+module OPPWAMobile {
+    header "../Headers/OPPWAMobile.h"
+    export *
+}
