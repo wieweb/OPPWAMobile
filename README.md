@@ -8,7 +8,7 @@
 lipo -info OPPWAMobile.framework/OPPWAMobile
 ````
 
-## Remove architectures
+## 1. Remove architectures
 
 remove x86_64 and i386
 
@@ -19,16 +19,32 @@ remove x86_64 and i386
  lipo -remove arm64  OPPWAMobile.framework/OPPWAMobile -o OPPWAMobile.framework/OPPWAMobile
 ````
 
+## 2. Add module.modulemap
+
+Add module.modulemap at `OPPWAMobile.framework/Modules/module.modulemap`
+
+```
+framework module OPPWAMobile {
+    umbrella header "OPPWAMobile.h"
+    export *
+}
+```
+
 # Prepare for SPM
 
-## Build XCFramework
+## 3. Build XCFramework
 
 ```
 xcodebuild -create-xcframework -framework x86_64/OPPWAMobile.framework -framework arm64/OPPWAMobile.framework -output OPPWAMobile.xcframework
 ```
 
-## Create SPM checksum
+## 4. Compress XCFramework
+
+create a compressed version of XCFramework `OPPWAMobile.xcframework.zip`
+
+## 5. Generate SPM checksum
 
 ```
 swift package compute-checksum OPPWAMobile.xcframework.zip
 ```
+
