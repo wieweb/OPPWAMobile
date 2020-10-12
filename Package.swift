@@ -16,7 +16,7 @@ let package = Package(
         .binaryTarget(
             name: "OPPWAMobile",
             url: "https://github.com/wieweb/OPPWAMobile/releases/download/0.1.1/OPPWAMobile.xcframework.zip",
-            checksum: "3eeaf0584c4736d82c8b0427b35482889a8182851a9e945a6d72198f8c2f6421"
+            checksum: "3ac458b6a7567cdd9bdf586a669c2a449985287b599528dd97a49d7695c6d8fd"
         )
     ]
 )
